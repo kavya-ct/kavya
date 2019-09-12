@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bridgelabz\\source\\repos\\Functionalpgms\\Functionalpgms\\Functionalpgms.csproj",
+      "projectUniqueName": "C:\\Users\\Bridgelabz\\Documents\\rep\\Functionalpgms\\Functionalpgms\\Functionalpgms.csproj",
       "projectName": "Functionalpgms",
-      "projectPath": "C:\\Users\\Bridgelabz\\source\\repos\\Functionalpgms\\Functionalpgms\\Functionalpgms.csproj",
+      "projectPath": "C:\\Users\\Bridgelabz\\Documents\\rep\\Functionalpgms\\Functionalpgms\\Functionalpgms.csproj",
       "packagesPath": "C:\\Users\\Bridgelabz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bridgelabz\\source\\repos\\Functionalpgms\\Functionalpgms\\obj\\",
+      "outputPath": "C:\\Users\\Bridgelabz\\Documents\\rep\\Functionalpgms\\Functionalpgms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

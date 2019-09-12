@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file=Harmonic.cs" company="Bridgelabz">
+// <copyright file=WindChill.cs" company="Bridgelabz">
 //   Copyright © 2019 Company="BridgeLabz"
 // </copyright>
 // <creator name="Kavya ct"/>
@@ -13,32 +13,27 @@ namespace Functionalpgms
     /// <summary>
     /// 
     /// </summary>
-    class Harmonic
+    public class WindChill
     {
         /// <summary>
-        /// Harmons this instance.
+        /// Winds this instance.
         /// </summary>
-        public static void Harmon()
-        {    
-           
-            
-
-            double N;
-            Harmonic h = new Harmonic();
-            Console.WriteLine("enter harmonic value:");
-            N = int.Parse(Console.ReadLine());
+        public void Wind()
+        {
+            double t, v;
+            t = Convert.ToDouble(Console.ReadLine());
+            v = Convert.ToDouble(Console.ReadLine());
             ////
             ///
-            if (N != 0) 
+            if (t > 50 && v > 120 && v < 3)
             {
-                double r = 0.0;
-                for(double i = 1; i<=N; i++)
-                {
-                    r = r + (1 / i);
-                }
-                Console.WriteLine("the Nth Harmonic number will be:" + r);
+                Console.WriteLine("windchill is in range:");
+            }
+            else
+            {
+                double w = 35.74 + (0.6215 * t) + (0.4275 * t - 35.75) * Math.Pow(v, 0.16);
+                Console.WriteLine("windchill:" + w);
                 Console.ReadLine();
-                
             }
 
         }
