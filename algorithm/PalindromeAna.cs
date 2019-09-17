@@ -10,8 +10,14 @@ using System.Text;
 
 namespace Algorithmpgm
 {
+    /// <summary>
+    /// PalindromeAna is the class
+    /// </summary>
     public class PalindromeAna
     {
+        /// <summary>
+        /// Palindromes this instance.
+        /// </summary>
         public void Palindrome()
         {
 

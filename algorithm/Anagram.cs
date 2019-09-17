@@ -33,7 +33,7 @@ namespace Algorithmpgm
             {
                 int count = 0;
                 char[] ch1 = str1.ToCharArray();
-                char[] ch2 = str1.ToCharArray();
+                char[] ch2 = str2.ToCharArray();
 
                 Array.Sort(ch1);
                 Console.WriteLine(ch1);

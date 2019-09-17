@@ -22,34 +22,38 @@ namespace Algorithmpgm
         /// <param name="m">The m.</param>
         /// <param name="V">The v.</param>
         /// <returns></returns>
-        static int minNotes(int[] notes,int m,int V)
+        public void Notes(int amount)
         {
-            ////
-            ///
-            if (V == 0)
-                return 0;
-            int res = int.MaxValue;
-
-            for(int i =0; i<m; i++)
+            int[] notes = new int[] { 2000, 500, 20, 100, 50, 10, 5, 2, 1 };
+            int[] noteCounter = new int[9];
+            for (int i = 0; i < 9; i++)
+            {
+                if (amount >= notes[i])
                 {
-                if(notes[i] <= V)
-                {
-                    int sub_res = minNotes(notes, m, V - notes[i]);
-                    if (sub_res != int.MaxValue && sub_res + 1 < res)
-                        res = sub_res + 1;
+                    noteCounter[i] = amount / notes[i];
+                    amount = amount - noteCounter[i] * notes[i];
                 }
             }
-            return res;
 
+            Console.WriteLine("Currency count");
+            for (int i = 0; i < 9; i++)
+            {
+                if (noteCounter[i] != 0)
+                {
+                    Console.WriteLine(notes[i] + ":" + noteCounter[i]);
+                }
+            }
         }
 
-        public  void Machine()
+        public void Amount()
         {
-            int[] notes = { 1, 2, 5, 10, 50, 100, 500, 1000 };
-            int m = notes.Length;
-            int V = 18;
-            Console.Write("Minimum notes required is " +
-                             minNotes(notes, m, V));
+            Console.WriteLine("Enter the amount");
+            int amount = Convert.ToInt32(Console.ReadLine());
+            Notes(amount);
         }
     }
 }
+           
+
+
+        
