@@ -10,14 +10,21 @@ using System.Text;
 
 namespace DataStructure
 {
+    /// <summary>
+    /// BinarySearch is the class
+    /// </summary>
     class BinarySearch
     {
         Utility utility = new Utility();
 
+        /// <summary>
+        /// Searches this instance.
+        /// </summary>
         public void Search()
         {
             try
             {
+                ////using exception handling method
                 int num = 0;
                 bool iterate = true;
                 while(iterate)
@@ -37,8 +44,8 @@ namespace DataStructure
                     }
                     iterate = false;
                 }
-               // int numBinaryTree = utility.CountBinarySearch(num);
-                //Console.WriteLine("Number possible of binary tree=" + numBinaryTree);
+                int numBinaryTree = Utility.CountBinarySearch(num);
+                Console.WriteLine("Number possible of binary tree=" + numBinaryTree);
             }
             catch(Exception ex)
             {

@@ -1,76 +1,104 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=Calender.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Kavya ct"/>
+// --------------------------------------------------------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DataStructure
 {
-   public class Calender
+    /// <summary>
+    /// Calender is the class
+    /// </summary>
+    public class Calender
     {
-        public static void PrintCalender()
+
+        Utility utility = new Utility();
+        /// <summary>
+        /// Prints the calender.
+        /// </summary>
+        public  void PrintCalender()
         {
             int month = 0, year = 0;
             bool ValidationforMonth = true;
-            ;
-
-        }
-        public static int day(int month, int day, int year)
-
-        {
-            int y = year - (14 - month) / 12;
-            int x = y + y / 4 - y / 100 + y / 400;
-            int m = month + 12 * ((14 - month) / 12) - 2;
-            int d = (day + x + (31 * m) / 12) % 7;
-            return d;
-        }
-
-        // return true if the given year is a leap year
-        public static Boolean isLeapYear(int year)
-        {
-            if ((year % 4 == 0) && (year % 100 != 0)) return true;
-            if (year % 400 == 0) return true;
-            return false;
-        }
-        public void Year()
-        {
-            int month = Convert.ToInt32(Console.ReadLine());   
-            int year = Convert.ToInt32(Console.ReadLine());    
-
-            // months[i] = name of month i
-            String[] months = {
-            "",                               
-            "January", "February", "March",
-            "April", "May", "June",
-            "July", "August", "September",
-            "October", "November", "December" };
-        
-
-
-        // days[i] = number of days in month i
-        int[] days = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-
-
-            // check for leap year
-            if (month == 2 && isLeapYear(year)) days[month] = 29;
-
-
-            // print calendar header
-            Console.WriteLine("   " + months[month] + " " + year);
-            Console.WriteLine(" S  M Tu  W Th  F  S");
-
-            // starting day
-            int d = day(month, 1, year);
-
-            // print the calendar
-            for (int i = 0; i < d; i++)
-                Console.WriteLine("   ");
-            for (int i = 1; i <= days[month]; i++)
+            try
             {
-                Console.WriteLine("%2d ", i);
-                if (((i + d) % 7 == 0) || (i == days[month])) Console.WriteLine();
-            }
+                ////month(jan=1; to Dec=12)
+                while (ValidationforMonth)
+                {
+                    Console.WriteLine("Enter the month in Number");
+                    string stringMonth = Console.ReadLine();
+                    if (Utility.IsNumber(stringMonth) == false)
+                    {
+                        Console.WriteLine("Invalid Month");
+                        continue;
+                    }
+                    month = Convert.ToInt32(stringMonth);
+                    if (month <= 0 || month > 12)
+                    {
+                        Console.WriteLine("Invalid month");
+                        continue;
+                    }
+                    ValidationforMonth = false;
+                }
+                bool validationforYear = true;
+                while (validationforYear)
+                {
+                    Console.WriteLine("enter the year");
+                    string stringYear = Console.ReadLine();
+                    if (Utility.IsNumber(stringYear) == false)
+                    {
+                        Console.WriteLine("Invalid Year");
+                        continue;
+                    }
+                    if (stringYear.Length < 4)
+                    {
+                        Console.WriteLine("invalid year");
+                        Console.Read();
+                        return;
+                    }
+                    year = Convert.ToInt32(stringYear);
+                    validationforYear = false;
+                }
+                string[] monthName = { " ", "january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december" };
+                int[] numberofday = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+                ////for LeapYear check
+                if (month == 2 && Utility.isLeapYear(year)) numberofday[month] = 29;
 
+                Console.WriteLine("\t\t\t" + monthName[month] + " " + year);
+                Console.WriteLine();
+                Console.WriteLine("su\tm\tTu\tw\tTh\tf\tSa");
+                ////weekdays where month start
+                int d = Utility.day(month, 1, year);
+                   
+                for (int j = 0; j < d; j ++)
+                {
+                    Console.Write(" \t");
+
+                }
+                for (int i = 1; i <= numberofday[month]; i++)
+                {
+                    Console.Write(i + "\t");
+                    if (((i + d) % 7 == 0) || (i == numberofday[month]))
+                        Console.WriteLine();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
-
 }
+
+
+
+
+
+
+
 

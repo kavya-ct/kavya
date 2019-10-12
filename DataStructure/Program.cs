@@ -9,7 +9,7 @@ namespace DataStructure
         {
             int choice;
             Console.WriteLine("1.UnorderdList\n2.OrderedList\n3.BalancedParanthesis\n4.BankingCashCounter\n5.PalindromeChecker\n6.Calender");
-            Console.WriteLine("\n7.PrimeNumbers\n8.BinarySearch");
+            Console.WriteLine("\n7.PrimeNumbers\n8.BinarySearch\n9.Anagram\n10.AnaPrime\n11AnagramStack\n12.CalenderWeek");
 
 
             Console.WriteLine("Enter your choice");
@@ -45,7 +45,7 @@ namespace DataStructure
 
                 case 6:
                     Calender month = new Calender();
-                    month.Year();
+                    month.PrintCalender();
                     break;
 
                 case 7:
@@ -57,6 +57,29 @@ namespace DataStructure
                     BinarySearch binary = new BinarySearch();
                     binary.Search();
                     break;
+
+                case 9:
+                    Anagram ana = new Anagram();
+                    ana.Panagrams();
+                    break;
+
+                case 10:
+                    AnaPrime ana1 = new AnaPrime();
+                    ana1.Prime();
+                    break;
+
+                case 11:
+                    AnagramStack stack = new AnagramStack();
+                    stack.Stack();
+                    break;
+
+                case 12:
+                     CalenderWeek week = new CalenderWeek();
+                     week.Calender();
+                     break;
+
+
+                    
 
                 
 

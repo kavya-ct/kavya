@@ -60,7 +60,7 @@ namespace DataStructure
                     {
                         if (primeNumber[i, j] != 0)
                         {
-                            Console.Write(primeNumber[i, j] + " ,");
+                            Console.Write(primeNumber[i, j] + " ");
 
                         }
                     }

@@ -344,40 +344,66 @@ namespace DataStructure
                 Console.WriteLine("Inserted " + " " + node.data);
             }
         }
-    }
 
-    public static bool IsNumber(String input)
-    {
-        for(int i = 0; i<input.Length;i++)
+
+        public static bool IsNumber(String input)
         {
-            if(char.IsDigit(input[i]) == false)
+            for (int i = 0; i < input.Length; i++)
             {
-                return false;
+                if (char.IsDigit(input[i]) == false)
+                {
+                    return false;
+                }
             }
+            return true;
         }
-        return true;
-    }
-    public static int CountBinarySearch(int n)
-    {
-        int numerator = 0;
-        int denominator = 0;
-        ////to count binary trees for given no. of n
-        numerator = Factorial(2 * n);
-        denominator = Factorial(n + 1) * Factorial(n);
-        return numerator / denominator;
-
-    }
-
-    public static int Factorial(int num)
-    {
-        int fact = num;
-        while (num > 1)
+        public static int CountBinarySearch(int n)
         {
-            fact = fact * (num - 1);
-            num--;
+            int numerator = 0;
+            int denominator = 0;
+            ////to count binary trees for given no. of n
+            numerator = Factorial(2 * n);
+            denominator = Factorial(n + 1) * Factorial(n);
+            return numerator / denominator;
+
         }
-        return num;
+
+        public static int Factorial(int num)
+        {
+            int fact = num;
+            while (num > 1)
+            {
+                fact = fact * (num - 1);
+                num--;
+            }
+            return num;
+        }
+
+        public static int day(int month,int day,int year)
+        {
+            int y = year - (14 - month) / 12;
+            int x = y + y / 4 - y / 100 + y / 400;
+            int m = month + 12 * ((14 - month) / 12) - 2;
+            int d = (day + x + (31 * m) / 12) % 7;
+            return d;
+        }
+
+        public static bool isLeapYear(int year)
+        {
+            if((year % 4 == 0) && (year % 100 != 0))
+            { 
+                return true;
+            }
+            if (year % 400 == 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
+
+
+
 }
 
 
