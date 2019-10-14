@@ -1,0 +1,6 @@
+﻿hello<<name>>,
+we have your name as <<full name>> in our system.
+your contact number is 91-xxxxxxxxxx
+please let us know in case of any clarification.
+thank you  BridgeLabz
+27/09/2019

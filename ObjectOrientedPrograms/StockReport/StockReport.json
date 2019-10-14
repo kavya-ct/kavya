@@ -1,0 +1,30 @@
+[
+
+  {
+    "stockname": "Bazaz",
+    "shareperson": 10,
+    "stockprice": 10000
+
+  },
+
+  {
+    "stockname": "sedan",
+    "shareperson": 15,
+    "stockprice": 20000
+
+  },
+
+  {
+    "stockname": "Suv",
+    "shareperson": 20,
+    "stockprice": 2000
+
+  },
+
+  {
+    "stockname": "Audi",
+    "shareperson": 10,
+    "stockprice": 10000
+
+  }
+]
