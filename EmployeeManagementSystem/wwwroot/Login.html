@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+</head>
+<body>
+    <div style="background-color:oldlace">
+        <h2 align="center"><b> DETAILS</b> </h2>
+        <form method="POST" id=" insert " action="Login">
+            <table border="0" align="center">
+                <tbody>
+                    <tr><td><br></td></tr>
+                    <tr>
+                        <td>
+                            <label for="username"><b>USERNAME</b></label>
+                        </td>
+                        <td>
+                            <input type="text" id="eusername" name="eusername" placeholder="username" required />
+                        </td>
+                    </tr>
+                    <tr><td><br /></td></tr>
+                    <tr>
+                        <td><label><b>PASSWORD</b></label></td>
+                        <td><input type="text" id="epassword" name="epassword" placeholder="password" /></td>
+                    </tr>
+                    
+                    <tr><td><b /></td></tr>
+                    <tr>
+                        <td> <pre class="tab"></pre></td>
+                        <td width="67px">
+                            <b>
+                                <input type="button" value="CANCEL" id="CANCEL" onclick="window.location.href='https://localhost:44321//Login.html'">
+                            </b>
+                        <td width="67px">
+                            <input type="button" name="LOGIN" id="buttonSubmit" onclick="buttonSubmit();" value="LOGIN" />
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#buttonSubmit").click(function () {
+
+                var formData = new FormData();
+                formData.append("username", $("#eusername").val());
+                formData.append("password", $("#epassword").val());
+               
+                //console.log(formData.id);
+                $.ajax({
+                    url: "/login",
+                    type: 'POST',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    success: function (response) {
+                        alert("Employee Login Sucessfully");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
