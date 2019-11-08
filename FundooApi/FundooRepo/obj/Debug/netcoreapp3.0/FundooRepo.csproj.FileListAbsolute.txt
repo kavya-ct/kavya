@@ -1,0 +1,11 @@
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\bin\Debug\netcoreapp3.0\FundooRepo.deps.json
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\bin\Debug\netcoreapp3.0\FundooRepo.dll
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\obj\Debug\netcoreapp3.0\FundooRepo.csprojAssemblyReference.cache
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\obj\Debug\netcoreapp3.0\FundooRepo.AssemblyInfoInputs.cache
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\obj\Debug\netcoreapp3.0\FundooRepo.AssemblyInfo.cs
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\bin\Debug\netcoreapp3.0\FundooRepo.pdb
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\bin\Debug\netcoreapp3.0\FundooModel.dll
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\bin\Debug\netcoreapp3.0\FundooModel.pdb
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\obj\Debug\netcoreapp3.0\FundooRepo.csproj.CopyComplete
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\obj\Debug\netcoreapp3.0\FundooRepo.dll
+C:\Users\Bridgelabz\source\repos\FundooApi\FundooRepo\obj\Debug\netcoreapp3.0\FundooRepo.pdb
